@@ -1,0 +1,7 @@
+interface:
+  display_name: "English Learning Coach"
+  short_description: "Adaptive English coach for all ages"
+  default_prompt: "Use $english-learning-coach to assess my English goal and start a focused practice session."
+
+policy:
+  allow_implicit_invocation: true
