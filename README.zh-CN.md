@@ -1,8 +1,20 @@
-![英语学习教练 Skill 横幅](assets/readme-banner-cn.svg)
+<div align="center">
 
-# 英语学习教练 Skill
+# English Learning Coach
+
+**面向英语练习、HTML 练习页、TTS 和学习记录的自适应 Agent Skill**
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Platform](https://img.shields.io/badge/Platform-Codex-1d5fd1)
+![Skill](https://img.shields.io/badge/Skill-english--learning--coach-0f8f83)
+![IELTS](https://img.shields.io/badge/IELTS-Ready-e85d4f)
+![TTS](https://img.shields.io/badge/TTS-Browser%20%7C%20edge--tts-e8b448)
+
+把英语学习目标转成清晰练习、真实反馈、可视化页面和可复用学习记录。
 
 [English README](README.md)
+
+</div>
 
 英语学习教练是一个面向英语学习的自适应 Codex Skill。它会根据学习者年龄、目标、当前水平、可用时间和输入材料，自动选择合适的练习模式，生成任务、反馈和学习记录。
 
@@ -39,9 +51,6 @@ english-learning-coach/
   README.zh-CN.md
   agents/
     openai.yaml
-  assets/
-    readme-banner.svg
-    readme-banner-cn.svg
 ```
 
 安装后重启 Codex，让工具重新识别 Skill。
@@ -307,4 +316,3 @@ Skill is valid!
 4. 浏览器朗读页面建议在 Microsoft Edge 中验证声音。
 5. mp3 页面要确认音频清单覆盖所有需要朗读的内容。
 6. 每次结构性修改后重新运行 `quick_validate.py`。
-
