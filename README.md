@@ -1,8 +1,20 @@
-![English Learning Coach Skill banner](assets/readme-banner.svg)
+<div align="center">
 
-# English Learning Coach Skill
+# English Learning Coach
+
+**Adaptive English practice, HTML lessons, TTS, and learning records for Agent Skills**
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Platform](https://img.shields.io/badge/Platform-Codex-1d5fd1)
+![Skill](https://img.shields.io/badge/Skill-english--learning--coach-0f8f83)
+![IELTS](https://img.shields.io/badge/IELTS-Ready-e85d4f)
+![TTS](https://img.shields.io/badge/TTS-Browser%20%7C%20edge--tts-e8b448)
+
+Turn English learning goals into focused practice, realistic feedback, visual lessons, and reusable learning records.
 
 [中文 README](README.zh-CN.md)
+
+</div>
 
 English Learning Coach is an adaptive Codex Skill for English learning. It routes learners by age, goal, level, available time, and material type, then creates a focused learning activity with feedback and a learning record.
 
