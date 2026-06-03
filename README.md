@@ -28,7 +28,7 @@ The Skill is designed for practical learning sessions:
 2. Create a focused task.
 3. Give realistic feedback.
 4. Generate a learning record.
-5. Ask whether progress should be saved.
+5. Offer a way to continue from previous progress.
 
 ## What It Can Do
 
@@ -71,7 +71,7 @@ Good examples:
 
 ### TTS Support
 
-The Skill supports several TTS modes:
+Audio can be added to visual lessons in several ways:
 
 | Mode | Best for | Notes |
 | --- | --- | --- |
@@ -80,21 +80,23 @@ The Skill supports several TTS modes:
 | Azure AI Speech | Product quality audio | Requires user provided credentials |
 | Amazon Polly | AWS based batch audio | Requires user provided credentials |
 
-For short interactive lessons, browser speech is recommended. It can read newly generated sentences and does not need audio files.
+For most interactive lessons, browser speech is the simplest option. It works well for word cards, sentence drills, quiz prompts, and model answers.
 
-For fixed mp3 lessons, the Skill should first create an audio manifest that covers every required utterance, including words, sentences, quiz prompts, dialogue turns, and model answers.
+For reusable course packs, mp3 audio can be generated in advance and attached to the lesson page.
 
 ### Realistic Feedback
 
-The Skill is expected to reject meaningless input before giving feedback.
+Feedback is designed to be practical and task aware.
 
-For example, if a user enters random letters, it should say that the answer cannot be scored yet and ask for a real response.
+For IELTS and TOEFL practice, responses can be reviewed against the target task, with attention to clarity, structure, vocabulary, grammar, and next steps.
 
-For valid answers, feedback should focus on:
+For younger learners, feedback stays simple and encouraging. For exam preparation, feedback becomes stricter and more scoring oriented.
 
-1. The most serious issue affecting meaning or score.
-2. A repeated grammar, vocabulary, coherence, or expression pattern.
-3. One upgrade that helps the learner retry immediately.
+Typical feedback includes:
+
+1. What worked.
+2. What blocked comprehension or score improvement.
+3. A better version or retry task.
 
 ### Learning Records
 
@@ -109,7 +111,7 @@ Learning preference: timed task, model answer, browser TTS
 Next task: repeat the same cue card with one stronger example
 ```
 
-If the Agent environment supports memory, the Skill asks whether the user wants to save the learning record.
+The record can be reused in a later session so the learner does not start from zero every time.
 
 ## Quick Start
 
@@ -165,27 +167,19 @@ When context is missing, the Skill uses a short five question intake:
 2. What is the goal?
 3. What is the current level?
 4. How much time is available today?
-5. What should be practiced, or does the user have material?
+5. The practice topic or material for the session.
 
 Then it chooses a mode and starts the learning task.
 
-For child friendly pages, it should usually create a visual HTML activity.
+For child friendly pages, the result is usually a visual HTML activity.
 
-For IELTS, TOEFL, university, and workplace practice, it should use a cleaner task based interface with timed practice and focused feedback.
+For IELTS, TOEFL, university, and workplace practice, the experience is more focused on timed tasks and concrete feedback.
 
-## Optional TTS Setup
+## Audio Options
 
-The base Skill works without TTS dependencies.
+The base Skill works without audio dependencies.
 
-If the user wants audio, the Skill should ask:
-
-```text
-需要为本次英语练习安装或配置 TTS 吗？
-1. 不需要，使用浏览器内置朗读
-2. 需要，帮我安装 edge-tts 生成 mp3
-3. 需要，帮我配置 Azure AI Speech
-4. 需要，帮我配置 Amazon Polly
-```
+Audio is optional and can be added when pronunciation, listening, or shadowing practice matters.
 
 ### Browser Speech
 
@@ -195,13 +189,13 @@ Open generated HTML pages with Microsoft Edge for the most reliable sound. Chrom
 
 ### edge-tts
 
-Install:
+For fixed mp3 lesson packs, `edge-tts` can be used locally:
 
 ```bash
 python -m pip install edge-tts
 ```
 
-Check voices:
+Voice check:
 
 ```bash
 python -m edge_tts --list-voices
@@ -213,13 +207,13 @@ Generate an audio file:
 python -m edge_tts --voice en-US-JennyNeural --rate=-10% --text "I like rabbits." --write-media i-like-rabbits.mp3
 ```
 
-Use edge-tts for complete fixed audio packs. For dynamic lessons, browser speech is usually a better fit.
+For dynamic lessons, browser speech is usually a better fit.
 
 ### Azure AI Speech And Amazon Polly
 
-Use these only after the user chooses the provider and supplies credentials.
+Cloud TTS providers can be used for product quality voices, stable pronunciation, and larger lesson libraries.
 
-Never write credentials into generated HTML, README files, logs, learning records, memory records, or commits.
+Credentials are required for these providers and belong outside public lesson files.
 
 ## Installable Files
 
