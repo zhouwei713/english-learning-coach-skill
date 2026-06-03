@@ -1,4 +1,8 @@
+![English Learning Coach Skill banner](assets/readme-banner.svg)
+
 # English Learning Coach Skill
+
+[中文 README](README.zh-CN.md)
 
 English Learning Coach is an adaptive Codex Skill for English learning. It routes learners by age, goal, level, available time, and material type, then creates a focused learning activity with feedback and a learning record.
 
@@ -299,4 +303,3 @@ When updating this Skill:
 4. For browser speech pages, verify sound in Microsoft Edge.
 5. For generated mp3 pages, verify the audio manifest covers all required utterances.
 6. Re run `quick_validate.py` after every structural change.
-
