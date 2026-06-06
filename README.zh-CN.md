@@ -225,6 +225,10 @@ english-learning-coach/
   LICENSE
   agents/
     openai.yaml
+  references/
+    learning-loops.md
+    skill-training-modes.md
+    vocabulary-system.md
 ```
 
 ## 校验
