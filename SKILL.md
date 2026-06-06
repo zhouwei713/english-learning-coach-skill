@@ -23,7 +23,25 @@ Ask:
 4. How much time is available today, such as 5, 15, 30, or 60 minutes?
 5. What should be practiced today, or does the user have material to process?
 
+Also infer or ask for two routing fields when they matter:
+
+1. Use scenario: exam, school, workplace, study abroad, daily conversation, interest based input, or parent assisted learning.
+2. Current bottleneck: vocabulary, listening, speaking, writing, reading speed, grammar, pronunciation, confidence, or consistency.
+
 Use a detailed intake of 8 to 10 questions only when the user asks for a detailed assessment, long term plan, test preparation plan, child learning plan, or customized learning profile. Add questions about deadline, weekly study time, main pain points, preferred feedback style, language preference, exam date, target score, textbook version, and custom fields to save.
+
+## Core Learning Loop
+
+Prefer a repeatable learning loop over one off explanations:
+
+1. Goal: confirm one practical target for this session.
+2. Input: use a short text, audio transcript, vocabulary set, question, scenario, or user material.
+3. Output: make the learner speak, write, summarize, answer, retell, translate, choose, or correct.
+4. Feedback: identify the most important issue and one upgrade.
+5. Retry: ask the learner to immediately use the correction in a second attempt when useful.
+6. Record: summarize weak points, useful expressions, next task, and save preference.
+
+For detailed methodology, read `references/learning-loops.md` when designing long running plans, multi session practice, or material reuse workflows.
 
 ## Learner Routing
 
@@ -62,6 +80,15 @@ When the user provides material, identify the type and convert it into practice:
 6. Word list: memory plan, example sentences, quiz, spaced review.
 7. Chinese request: turn it into English expression practice.
 
+One strong material can be reused across several tasks:
+
+1. Reading comprehension.
+2. Vocabulary and collocation extraction.
+3. Listening dictation or transcript reconstruction.
+4. Spoken retelling.
+5. Writing imitation or summary.
+6. Review quiz.
+
 Material flow:
 
 1. Identify material type.
@@ -73,6 +100,8 @@ Material flow:
 7. Generate a learning record.
 8. Ask whether to save the record.
 
+When the material is complex or the user wants systematic training, read `references/skill-training-modes.md` before choosing the exact task.
+
 ## Practice Design
 
 Generate small, high quality practice sets.
@@ -82,6 +111,40 @@ Default to 1 to 5 tasks per round. Prefer tasks that reveal a learning problem. 
 If the user asks for bulk practice, expand to 10 to 20 tasks and still include feedback structure.
 
 For school and test preparation, add a similar retry task after feedback when useful.
+
+## Vocabulary System
+
+When vocabulary is the goal or bottleneck, treat it as a managed learning system.
+
+Default vocabulary card fields:
+
+1. Word or expression.
+2. Meaning.
+3. Pronunciation note or audio need.
+4. Example sentence.
+5. Common collocations.
+6. Confusing words or near misses.
+7. Source material.
+8. Learner sentence.
+9. Review status.
+10. Next review date.
+
+Vocabulary practice should include context, learner output, and review. Do not stop at word meaning unless the user only asked for a quick lookup.
+
+Use review checkpoints such as 5 minutes, 1 day, 2 days, 4 days, 7 days, and 15 days when creating a plan or learning record.
+
+Read `references/vocabulary-system.md` when building word lists, review plans, flashcards, quizzes, or long term vocabulary records.
+
+## Skill Training Modes
+
+Use specialized loops for the four core skills:
+
+1. Listening: choose intensive listening for dictation, transcript comparison, shadowing, pronunciation patterns, and chunk awareness. Choose extensive listening for interest based exposure and main idea practice.
+2. Reading: choose intensive reading for logic, sentence structure, expressions, and summary. Choose extensive reading for interest, stamina, and manageable input.
+3. Speaking: use short output loops. Let the learner speak or draft an answer, fix 1 to 2 important issues, then retry immediately.
+4. Writing: ask the learner to write first, mark the biggest issues, let the learner revise, then provide a stronger comparison version.
+
+Read `references/skill-training-modes.md` when building detailed listening, reading, speaking, or writing lessons.
 
 ## Role Play
 
@@ -122,6 +185,8 @@ Use this structure:
 Use detailed line by line correction only when the user asks for detailed correction, sentence by sentence feedback, exam score improvement, or complete teacher review.
 
 For children and beginners, correct less and demonstrate more. Avoid heavy terminology. Fix one key point at a time.
+
+For speaking and writing improvement, prefer feedback that leads to a retry in the same session. Avoid giving many comments without asking the learner to produce an improved version.
 
 ## Simulated Scoring
 
